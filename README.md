@@ -1,4 +1,3 @@
-# Employees-SQL
 CREATE TABLE emp (
     EMPNO INT PRIMARY KEY,
     ENAME VARCHAR(20),
@@ -30,18 +29,14 @@ CREATE TABLE dept (
  DEPTNO INT PRIMARY KEY,
  DNAME VARCHAR(20),
  LOC VARCHAR(20)
+ );
  
- SELECT e.ename, d.dname, e.salary
-FROM emp e
-JOIN dept d ON e.deptno = d.deptno
-WHERE e.salary > 1000 AND e.salary < 2000;
-);
-
-INSERT INTO dept (DEPTNO, DNAME, LOC) VALUES
+ INSERT INTO dept (DEPTNO, DNAME, LOC) VALUES
 (10, 'ACCOUNTING', 'NEW YORK'),
 (20, 'RESEARCH', 'DALLAS'),
 (30, 'SALES', 'CHICAGO'),
 (40, 'OPERATIONS', 'BOSTON');
+
 
 SELECT e.ename, d.dname, e.salary
 FROM emp e
